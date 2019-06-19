@@ -8,5 +8,12 @@ npm install -S afeiship/next-slice2arr --registry=https://registry.npm.taobao.or
 
 ## usage
 ```js
-//DOCS here!
+import 'next-slice2arr';
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+nx.slice2arr(arr,2);
+// [ 
+//   [ 1, 2 ], 
+//   [ 3, 4, 5, 6, 7 ]
+// ]
 ```
