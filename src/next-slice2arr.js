@@ -4,13 +4,8 @@
 
   nx.slice2arr = function(inArray, inIndex) {
     var len = inArray.length;
-    if (len <= inIndex) {
-      nx.error('Index must less than array.length');
-    }
-    return [
-      inArray.slice(0, inIndex),
-      inArray.slice(inIndex),
-    ];
+    var index = len <= inIndex ? len : inIndex;
+    return [inArray.slice(0, index), inArray.slice(index)];
   };
 
   if (typeof module !== 'undefined' && module.exports) {

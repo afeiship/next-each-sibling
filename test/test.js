@@ -23,17 +23,15 @@ describe('Basic test', () => {
     expect(res[1]).toEqual([9]);
   });
   test('split in eq length', function() {
-    var len_ = items.length;
-    function willThrow() {
-      nx.slice2arr(items, len_);
-    }
-    expect(willThrow).toThrow();
+    var len = items.length;
+    nx.slice2arr(items, len);
+    expect(res[0]).toEqual([]);
+    expect(res[1]).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
   test('split in large then length', function() {
     var len_ = items.length + 4;
-    function willThrow() {
-      nx.slice2arr(items, len_);
-    }
-    expect(willThrow).toThrow();
+    nx.slice2arr(items, len_);
+    expect(res[0]).toEqual([]);
+    expect(res[1]).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 });
