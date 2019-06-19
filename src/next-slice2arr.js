@@ -5,6 +5,7 @@
   nx.slice2arr = function(inArray, inIndex) {
     var len = inArray.length;
     var index = len <= inIndex ? len : inIndex;
+    index = index >= 0 ? index : len + index;
     return [inArray.slice(0, index), inArray.slice(index)];
   };
 

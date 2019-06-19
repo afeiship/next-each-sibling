@@ -24,14 +24,26 @@ describe('Basic test', () => {
   });
   test('split in eq length', function() {
     var len = items.length;
-    nx.slice2arr(items, len);
-    expect(res[0]).toEqual([]);
-    expect(res[1]).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    var res = nx.slice2arr(items, len);
+    expect(res[0]).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    expect(res[1]).toEqual([]);
   });
   test('split in large then length', function() {
     var len_ = items.length + 4;
-    nx.slice2arr(items, len_);
-    expect(res[0]).toEqual([]);
-    expect(res[1]).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    var res = nx.slice2arr(items, len_);
+    expect(res[0]).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    expect(res[1]).toEqual([]);
+  });
+  test('split when index is nagative value(-1)', function() {
+    var len = -1;
+    var res = nx.slice2arr(items, len);
+    expect(res[0]).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(res[1]).toEqual([9]);
+  });
+  test('split when index is nagative value(-2)', function() {
+    var len = -2;
+    var res = nx.slice2arr(items, len);
+    expect(res[0]).toEqual([1, 2, 3, 4, 5, 6, 7]);
+    expect(res[1]).toEqual([8, 9]);
   });
 });
