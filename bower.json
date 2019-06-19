@@ -1,0 +1,28 @@
+{
+  "name": "next-slice2arr",
+  "version": "0.0.1",
+  "description": "Slice array to two part",
+  "main": "dist/next-slice2arr.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-slice2arr",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
